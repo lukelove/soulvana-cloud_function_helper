@@ -36,7 +36,7 @@ exports.publishMessage = async function publishMessage(topicName, json) {
 
   const callback = (err, messageId) => {
     if (err) {
-      // Error handling omitted.
+      console.log("publish error ", err, topicName, json);
     }else{
       console.log(`Message ${messageId} published.`);
     }
